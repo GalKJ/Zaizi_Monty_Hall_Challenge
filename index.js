@@ -14,10 +14,8 @@
         const door = document.createElement('div');
         door.className = 'door';
         door.id = `door${column}`;
-        
-        // let shuffledPrizeArray = prizeArrayShuffler();
-        // console.log(shuffledPrizeArray);
         door.textContent = prizeArray[column];
+        // maybe i want to have the door.textContent set to an empty string but reveal it to the user when the door and then last two doors are opened 
         container.appendChild(door);
         
         // return door;
@@ -46,20 +44,12 @@
     }
 
 // Function to randomise the prize behind the door.
-    // function randomPrizePicker() {
-    //     let randomNumber = Math.floor(Math.random() * 3);
-    //     return prizeArray[randomNumber];
-    // }
     function prizeArrayShuffler() {
         let shuffledPrizeArray = prizeArray.sort(() => Math.random() - .5)
-        // const door0 = document.querySelector("#door0");
-        // console.log(door0);
         return shuffledPrizeArray
     }
 
-    
-    // prizeArrayShuffler();
+
     startGame();
 
-// const door0 = document.querySelector("#door0");
-// door0.textContent = prizeArray[0];
+
