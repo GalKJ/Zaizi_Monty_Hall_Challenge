@@ -14,8 +14,14 @@
         const door = document.createElement('div');
         door.className = 'door';
         door.id = `door${column}`;
-        door.textContent = prizeArray[column];
-        // maybe i want to have the door.textContent set to an empty string but reveal it to the user when the door and then last two doors are opened 
+        const doorParagraph = document.createElement('p');
+        door.appendChild(doorParagraph);
+        doorParagraph.textContent = prizeArray[column];
+        doorParagraph.style.visibility = "hidden";
+        // maybe i want to have the door.textContent set to an empty string but reveal it to the user when the door and then last two doors are opened
+        door.addEventListener('click', () => {
+            // Where in the flow do i want to add the event listeners so that they work as needed?
+        })
         container.appendChild(door);
         
         // return door;
