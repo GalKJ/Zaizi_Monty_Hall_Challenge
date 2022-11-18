@@ -1,5 +1,8 @@
 // Zaizi Monty Hall index.js file
 
+// Array of prizes behind doors.
+    const prizeArray = ['Car', 'Goat', 'Goat'];
+
 
 // Function to draw doors that will contain prizes as their text content 
     function drawDoor(container, column, prize = '') {
@@ -31,6 +34,11 @@
         const game = document.querySelector("#game-container");
         drawGrid(game);
  
+    }
+
+// Function to randomise the prize behind the door.
+    function randomNumberGenerator() {
+       return Math.floor(Math.random() * 3);
     }
 
     startGame();

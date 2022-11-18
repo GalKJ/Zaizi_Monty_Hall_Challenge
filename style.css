@@ -26,10 +26,10 @@ grid-template-columns: repeat(3, auto);
 }
 
 .door {
-width: 60px;
-height: 80px;
+width: 90px;
+height: 180px;
 border: 2px solid var(--empty);
-margin: 4px;
+margin: 10px;
 color: white;
 display: grid;
 place-items: center;
