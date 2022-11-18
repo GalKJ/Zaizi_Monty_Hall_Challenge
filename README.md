@@ -7,5 +7,18 @@
 ### The Monty Hall problem.
 
 Some useful sources to introduce you to the problem are below.
+
 - https://www.youtube.com/watch?v=7u6kFlWZOWg
 - https://www.youtube.com/watch?v=9vRUxbzJZ9Y
+
+---
+
+### User Stories
+
+- The user wants to pick a door.
+- ... to have the goat revealed.
+- ... to stick with their door (the user will only ever stick).
+- ... to see if they win or lose.
+- ... to choose how many games to play.
+- ... to play manually or automatically.
+- ... to have their wins and loses recorded and visible.
