@@ -1,7 +1,12 @@
 // Zaizi Monty Hall index.js file
 
 // Array of prizes behind doors.
-    const prizeArray = ['Car', 'Goat', 'Goat'];
+    let prizeArray = ['Car', 'Goat', 'Goat'];
+
+    const state = {
+        grid: Array(3).fill(''),
+        currentColumn: 0,
+    } 
 
 
 // Function to draw doors that will contain prizes as their text content 
@@ -9,8 +14,10 @@
         const door = document.createElement('div');
         door.className = 'door';
         door.id = `door${column}`;
-        door.textContent = prize;
-
+        
+        // let shuffledPrizeArray = prizeArrayShuffler();
+        // console.log(shuffledPrizeArray);
+        door.textContent = prizeArray[column];
         container.appendChild(door);
         
         // return door;
@@ -32,14 +39,27 @@
 // Function to begin the game and draw the UI.
     function startGame() {
         const game = document.querySelector("#game-container");
+        
+        prizeArray = prizeArrayShuffler();
+        console.log(prizeArray);
         drawGrid(game);
- 
     }
 
 // Function to randomise the prize behind the door.
-    function randomNumberGenerator() {
-       return Math.floor(Math.random() * 3);
+    // function randomPrizePicker() {
+    //     let randomNumber = Math.floor(Math.random() * 3);
+    //     return prizeArray[randomNumber];
+    // }
+    function prizeArrayShuffler() {
+        let shuffledPrizeArray = prizeArray.sort(() => Math.random() - .5)
+        // const door0 = document.querySelector("#door0");
+        // console.log(door0);
+        return shuffledPrizeArray
     }
 
+    
+    // prizeArrayShuffler();
     startGame();
 
+// const door0 = document.querySelector("#door0");
+// door0.textContent = prizeArray[0];
