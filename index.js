@@ -1,7 +1,7 @@
 // Zaizi Monty Hall index.js file
 
 
-// The below function draws the doors that will contain prizes as their text content 
+// Function to draw doors that will contain prizes as their text content 
     function drawDoor(container, column, prize = '') {
         const door = document.createElement('div');
         door.className = 'door';
@@ -10,7 +10,7 @@
 
         container.appendChild(door);
         
-        return door;
+        // return door;
     }
 
 // Function to draw grid for doors.
