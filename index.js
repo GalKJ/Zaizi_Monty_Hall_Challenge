@@ -67,30 +67,56 @@ startGameButton.addEventListener("click", startGame);
         let randomDoorPicker = Math.floor(Math.random() * 3);
         const door0 = document.querySelector("#door0");
         const door1 = document.querySelector("#door1");
-        const door2 = document.querySelector("#door2"); 
+        const door2 = document.querySelector("#door2");
+        const consoleOutput = document.querySelector("#console-output");
 
         switch (randomDoorPicker) {
             case 0:
                 door0.classList.add("users-door");
                 door1.classList.add("not-users-door");
                 door2.classList.add("not-users-door");
+                consoleOutput.textContent = "User picked a door!";
                 break;
             case 1:
                 door1.classList.add("users-door");
                 door0.classList.add("not-users-door");
                 door2.classList.add("not-users-door");
+                consoleOutput.textContent = "User picked a door!";
                 break;
             case 2:
                 door2.classList.add("users-door");
                 door1.classList.add("not-users-door");
                 door0.classList.add("not-users-door");
+                consoleOutput.textContent = "User picked a door!";
                 break;
             default:
                 break;
         }
 
         const goatRevealDoor = document.querySelector(".goat.not-users-door");
-        goatRevealDoor.children[0].style.visibility = "visible";
+        
+        setTimeout(() => {
+            goatRevealDoor.children[0].style.visibility = "visible";
+            consoleOutput.textContent = "";
+        }, 2000);
+
+        setTimeout(() => {
+            consoleOutput.textContent = "The Goat booby prize was revealed!";
+        }, 2500);
+        
+        setTimeout(() => {
+            consoleOutput.textContent = "";
+        }, 5000);
+        
+        setTimeout(() => {
+            consoleOutput.textContent = "The User chooses to stick with their initial door!";
+        }, 5500);
+
+        
+
+
+
+
 
         startGameButton.removeEventListener("click", startGame);
 

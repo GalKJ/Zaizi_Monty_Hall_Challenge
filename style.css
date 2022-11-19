@@ -44,8 +44,9 @@ button:hover {
 }
 
 button:active {
-  border-top-color: #5c591b;
-  background: #5c591b;
+  border-top: 1px solid #f797f5;
+  background: #d665c5;
+  color: white;
 }
 
 #game-container {
@@ -85,7 +86,7 @@ font-family: Arial, Helvetica, sans-serif;
 font-size: 2.4rem;
 }
 
-p {
+#console-output {
   text-align: center;
   color: white;
   margin: 10% 0%;
