@@ -64,7 +64,7 @@ startGameButton.addEventListener("click", startGame);
         const door0 = document.querySelector("#door0");
         switch (randomDoorPicker) {
             case 0:
-                door0.classList.add("usersDoor");
+                door0.classList.add("users-door");
                 break;
             case 1:
                 console.log(1);

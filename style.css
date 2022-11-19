@@ -72,3 +72,18 @@ font-family: Arial, Helvetica, sans-serif;
 font-size: 2.4rem;
 }
 
+.door.users-door {
+width: 90px;
+height: 180px;
+background: linear-gradient(#d665c5, #54aae3);
+border: 2px solid var(--empty);
+margin: 10px;
+color: white;
+display: grid;
+place-items: center;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 2.4rem;
+}
+
+
+
