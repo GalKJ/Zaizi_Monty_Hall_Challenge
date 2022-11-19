@@ -60,7 +60,21 @@ startGameButton.addEventListener("click", startGame);
 
 // Function for user to start the game
     function startGame() {
-        console.log('game on');
+        let randomDoorPicker = Math.floor(Math.random() * 3);
+        const door0 = document.querySelector("#door0");
+        switch (randomDoorPicker) {
+            case 0:
+                door0.classList.add("usersDoor");
+                break;
+            case 1:
+                console.log(1);
+                break;
+            case 2:
+                console.log(2);
+                break;
+            default:
+                break;
+        }
     }
 
     loadPage();
