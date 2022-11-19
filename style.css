@@ -9,9 +9,44 @@
     --right: rebeccapurple;
   }
   
-  body {
+body {
     background-color: var(--default);
   }
+
+h1 {
+  text-align: center;
+  color: white;
+  margin-top: 5%;
+}
+
+#start-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+  border-top: 1px solid #f797f5;
+  background: linear-gradient(#54aae3, #d665c5);
+  padding: 14px 28px;
+  border-radius: 40px;
+  box-shadow: rgba(0,0,0,1) 0 1px 0;
+  text-shadow: rgba(0,0,0,.4) 0 1px 0;
+  color: white;
+  font-size: 20px;
+  font-family: Helvetica, Arial, Sans-Serif;
+  text-decoration: none;
+}
+
+button:hover {
+  border-top: 1px solid #f797f5;
+  background: linear-gradient(#d665c5, #54aae3);
+  color: white;
+}
+
+button:active {
+  border-top-color: #5c591b;
+  background: #5c591b;
+}
 
 #game-container {
     display: grid;
@@ -37,6 +72,3 @@ font-family: Arial, Helvetica, sans-serif;
 font-size: 2.4rem;
 }
 
-/* #door0 {
-  
-} */
