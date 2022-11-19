@@ -25,6 +25,10 @@ startGameButton.addEventListener("click", startGame);
         doorParagraph.textContent = prizeArray[column];
         doorParagraph.style.visibility = "hidden";
 
+        if (doorParagraph.textContent === "Goat") {
+            door.classList.add("goat");
+        }
+
         container.appendChild(door);
         
         // return door;
@@ -62,19 +66,34 @@ startGameButton.addEventListener("click", startGame);
     function startGame() {
         let randomDoorPicker = Math.floor(Math.random() * 3);
         const door0 = document.querySelector("#door0");
+        const door1 = document.querySelector("#door1");
+        const door2 = document.querySelector("#door2"); 
+
         switch (randomDoorPicker) {
             case 0:
                 door0.classList.add("users-door");
+                door1.classList.add("not-users-door");
+                door2.classList.add("not-users-door");
                 break;
             case 1:
-                console.log(1);
+                door1.classList.add("users-door");
+                door0.classList.add("not-users-door");
+                door2.classList.add("not-users-door");
                 break;
             case 2:
-                console.log(2);
+                door2.classList.add("users-door");
+                door1.classList.add("not-users-door");
+                door0.classList.add("not-users-door");
                 break;
             default:
                 break;
         }
+
+        const goatRevealDoor = document.querySelector(".goat.not-users-door");
+        goatRevealDoor.children[0].style.visibility = "visible";
+
+        startGameButton.removeEventListener("click", startGame);
+
     }
 
     loadPage();
