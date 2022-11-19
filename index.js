@@ -1,12 +1,18 @@
 // Zaizi Monty Hall index.js file
 
+// Selected elements 
+const startGameButton = document.querySelector("button");
+
+// Event listeners
+startGameButton.addEventListener("click", startGame);
+
 // Array of prizes behind doors.
     let prizeArray = ['Car', 'Goat', 'Goat'];
 
-    const state = {
-        grid: Array(3).fill(''),
-        currentColumn: 0,
-    } 
+    // const state = {
+    //     grid: Array(3).fill(''),
+    //     currentColumn: 0,
+    // } 
 
 
 // Function to draw doors that will contain prizes as their text content 
@@ -37,8 +43,8 @@
         container.appendChild(grid);
     }
 
-// Function to begin the game and draw the UI.
-    function startGame() {
+// Function to load the page and draw the UI.
+    function loadPage() {
         const game = document.querySelector("#game-container");
         
         prizeArray = prizeArrayShuffler();
@@ -52,7 +58,11 @@
         return shuffledPrizeArray
     }
 
+// Function for user to start the game
+    function startGame() {
+        console.log('game on');
+    }
 
-    startGame();
+    loadPage();
 
 
