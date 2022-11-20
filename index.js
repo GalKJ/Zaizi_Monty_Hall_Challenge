@@ -127,7 +127,7 @@ startGameButton.addEventListener("click", startGame);
                 door.children[0].style.visibility = "visible";
             usersDoor.children[0].style.visibility = "visible";
             });
-        }, 7500);
+        }, 7500); 
 
         
 
