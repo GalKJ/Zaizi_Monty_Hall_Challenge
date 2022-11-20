@@ -100,6 +100,9 @@ startGameButton.addEventListener("click", startGame);
         }
 
         const goatRevealDoor = document.querySelector(".goat.not-users-door");
+        const usersDoor = document.querySelector(".users-door");
+        const lastDoor = document.querySelectorAll(".not-users-door");
+        // console.log(usersDoor);
         
         setTimeout(() => {
             goatRevealDoor.children[0].style.visibility = "visible";
@@ -117,6 +120,14 @@ startGameButton.addEventListener("click", startGame);
         setTimeout(() => {
             consoleOutput.textContent = "The User chooses to stick with their initial door!";
         }, 5500);
+        
+        setTimeout(() => {
+            // if ()
+            lastDoor.forEach(door => {
+                door.children[0].style.visibility = "visible";
+            usersDoor.children[0].style.visibility = "visible";
+            });
+        }, 7500);
 
         
 
