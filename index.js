@@ -9,6 +9,12 @@ startGameButton.addEventListener("click", startGame);
 // Array of prizes behind doors.
     let prizeArray = ['Car', 'Goat', 'Goat'];
 
+// Object recording users wins and losses.
+    let winsLosses = {
+        Wins: 0,
+        Losses: 0,
+    }
+
     // const state = {
     //     grid: Array(3).fill(''),
     //     currentColumn: 0,
