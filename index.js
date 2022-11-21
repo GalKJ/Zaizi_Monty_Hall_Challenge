@@ -11,6 +11,8 @@
 // Selected elements 
     const startGameButton = document.querySelector("button");
     let winsLossesCounterDisplay = document.querySelector("#win-lose-counter-display");
+    const consoleOutput = document.querySelector("#console-output");
+
 
 // Event listeners
     startGameButton.addEventListener("click", startGame);
@@ -61,6 +63,8 @@
         const game = document.querySelector("#game-container");
         
         prizeArray = prizeArrayShuffler();
+
+        consoleOutput.textContent = "";
         // console.log(prizeArray);
         drawGrid(game);
     }
@@ -113,7 +117,7 @@
         const door0 = document.querySelector("#door0");
         const door1 = document.querySelector("#door1");
         const door2 = document.querySelector("#door2");
-        const consoleOutput = document.querySelector("#console-output");
+        // const consoleOutput = document.querySelector("#console-output");
 
         switch (randomDoorPicker) {
             case 0:

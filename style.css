@@ -87,6 +87,7 @@ font-size: 2.4rem;
 }
 
 #console-output {
+  min-height: 60px;
   text-align: center;
   color: white;
   margin: 5% 0%;
