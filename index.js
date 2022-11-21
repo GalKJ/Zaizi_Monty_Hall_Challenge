@@ -27,6 +27,8 @@
         door.className = 'door';
         door.id = `door${column}`;
         const doorParagraph = document.createElement('p');
+        doorParagraph.className = 'door-paragraph';
+        doorParagraph.id = `door-paragraph${column}`;
         door.appendChild(doorParagraph);
         doorParagraph.textContent = prizeArray[column];
         doorParagraph.style.visibility = "hidden";
@@ -58,7 +60,7 @@
         const game = document.querySelector("#game-container");
         
         prizeArray = prizeArrayShuffler();
-        console.log(prizeArray);
+        // console.log(prizeArray);
         drawGrid(game);
     }
 
@@ -143,15 +145,18 @@
                 winsLossesCounter.Losses ++;
             }
 
-            console.log(winsLossesCounter);
+            // console.log(winsLossesCounter);
 
             let userWinTotal = winsLossesCounter.Wins;
             let userLoseTotal = winsLossesCounter.Losses;
 
-            console.log(userWinTotal);
-            console.log(userLoseTotal);
+            // console.log(userWinTotal);
+            // console.log(userLoseTotal);
 
             winsLossesCounterDisplay.textContent = `Won:${userWinTotal} Lost:${userLoseTotal}`
+
+            startGameButton.addEventListener("click", startGame);
+            // startGameButton.addEventListener("click", loadPage);
 
         }, 9000); 
 
