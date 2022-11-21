@@ -1,4 +1,3 @@
-// Welcome to the Zaizi Monty Hall index.js file.
 
 // Array of prizes behind doors.
     let prizeArray = ['Car', 'Goat', 'Goat'];
@@ -8,6 +7,7 @@
         Wins: 0,
         Losses: 0,
     }
+
 // Selected global elements. 
     const startGameButton = document.querySelector("button");
     let winsLossesCounterDisplay = document.querySelector("#win-lose-counter-display");
@@ -58,7 +58,10 @@
         
         prizeArray = prizeArrayShuffler();
 
+        populateStorage();
+
         consoleOutput.textContent = "";
+
         drawGrid(game);
     }
 
@@ -174,8 +177,8 @@
 
             winsLossesCounterDisplay.textContent = `Won:${userWinTotal} Lost:${userLoseTotal}`;
 
-            localStorage.setItem('Won', `${userWinTotal}`);
-            localStorage.setItem('Lost', `${userLoseTotal}`);
+            // localStorage.setItem('Won', `${userWinTotal}`);
+            // localStorage.setItem('Lost', `${userLoseTotal}`);
 
             startGameButton.addEventListener("click", startGame);
 
