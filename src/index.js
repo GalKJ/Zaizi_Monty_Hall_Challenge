@@ -1,4 +1,4 @@
-// Zaizi Monty Hall index.js file
+// Welcome to the Zaizi Monty Hall index.js file.
 
 // Array of prizes behind doors.
     let prizeArray = ['Car', 'Goat', 'Goat'];
@@ -8,13 +8,13 @@
         Wins: 0,
         Losses: 0,
     }
-// Selected elements 
+// Selected global elements. 
     const startGameButton = document.querySelector("button");
     let winsLossesCounterDisplay = document.querySelector("#win-lose-counter-display");
     const consoleOutput = document.querySelector("#console-output");
 
 
-// Event listeners
+// Event listeners.
     startGameButton.addEventListener("click", startGame);
 
     // const state = {
@@ -23,7 +23,7 @@
     // } 
 
 
-// Function to draw doors that will contain prizes as their text content 
+// Function to draw doors that will contain prizes as their text content. 
     function drawDoor(container, column, prize = '') {
         const door = document.createElement('div');
         door.className = 'door';
@@ -33,12 +33,6 @@
         doorParagraph.id = `door-paragraph${column}`;
         door.appendChild(doorParagraph);
         doorParagraph.textContent = prize;
-        // doorParagraph.textContent = prizeArray[column];
-        // doorParagraph.style.visibility = "hidden";
-
-        // if (doorParagraph.textContent === "Goat") {
-        //     door.classList.add("goat");
-        // }
 
         container.appendChild(door);
         
@@ -74,19 +68,22 @@
         return shuffledPrizeArray
     }
 
-// Function for user to start the game
+// Function for user to start the game.
     function startGame() {
 
+// Selected function scoped elements.
         const doors = document.querySelectorAll(".door");
         const doorParagraph0 = document.querySelector("#door-paragraph0");
         const doorParagraph1 = document.querySelector("#door-paragraph1");
         const doorParagraph2 = document.querySelector("#door-paragraph2");
         const doorParagraphs = document.querySelectorAll(".door-paragraph");
 
+// Remove classes if added from previous game.
         doors.forEach(element => {
             element.classList.remove("users-door", "not-users-door");
         });        
 
+// Add a prize behind each door and hide them from the user.
         doorParagraph0.textContent = prizeArray[0];
         doorParagraph1.textContent = prizeArray[1];
         doorParagraph2.textContent = prizeArray[2];
@@ -95,12 +92,14 @@
             string.style.visibility = "hidden";
         });
 
+// Add a class of "goat" if the door has a goat behind it.
         doorParagraphs.forEach(element => {
             if (element.textContent === "Goat") {
                 element.parentElement.classList.add("goat");
             }
         });
 
+// Pick a random door for the user, change it's colour and render a message for the user.
         let randomDoorPicker = Math.floor(Math.random() * 3);
         const door0 = document.querySelector("#door0");
         const door1 = document.querySelector("#door1");
@@ -135,6 +134,7 @@
         const userWinText = "User wins!";
         const userLoseText = "User loses!";
         
+// Set the cadence of the game play and render messages letting the user know what is happening.
         setTimeout(() => {
             goatRevealDoor.children[0].style.visibility = "visible";
             consoleOutput.textContent = "";
@@ -172,17 +172,14 @@
             let userWinTotal = winsLossesCounter.Wins;
             let userLoseTotal = winsLossesCounter.Losses;
 
-            winsLossesCounterDisplay.textContent = `Won:${userWinTotal} Lost:${userLoseTotal}`
+            winsLossesCounterDisplay.textContent = `Won:${userWinTotal} Lost:${userLoseTotal}`;
+
+            localStorage.setItem('Won', `${userWinTotal}`);
+            localStorage.setItem('Lost', `${userLoseTotal}`);
 
             startGameButton.addEventListener("click", startGame);
 
         }, 9000); 
-
-        
-
-
-
-
 
         startGameButton.removeEventListener("click", startGame);
 
