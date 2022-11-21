@@ -2,6 +2,7 @@
 
 // Selected elements 
 const startGameButton = document.querySelector("button");
+let winsLossesCounterDisplay = document.querySelector("#win-lose-counter-display");
 
 // Event listeners
 startGameButton.addEventListener("click", startGame);
@@ -10,7 +11,7 @@ startGameButton.addEventListener("click", startGame);
     let prizeArray = ['Car', 'Goat', 'Goat'];
 
 // Object recording users wins and losses.
-    let winsLosses = {
+    let winsLossesCounter = {
         Wins: 0,
         Losses: 0,
     }
@@ -102,7 +103,8 @@ startGameButton.addEventListener("click", startGame);
         const goatRevealDoor = document.querySelector(".goat.not-users-door");
         const usersDoor = document.querySelector(".users-door");
         const lastDoor = document.querySelectorAll(".not-users-door");
-        // console.log(usersDoor);
+        const userWinText = "User wins!";
+        const userLoseText = "User loses!";
         
         setTimeout(() => {
             goatRevealDoor.children[0].style.visibility = "visible";
@@ -122,12 +124,22 @@ startGameButton.addEventListener("click", startGame);
         }, 5500);
         
         setTimeout(() => {
-            // if ()
+            
             lastDoor.forEach(door => {
                 door.children[0].style.visibility = "visible";
-            usersDoor.children[0].style.visibility = "visible";
+            
             });
-        }, 7500); 
+
+            usersDoor.children[0].style.visibility = "visible";
+            
+            if (usersDoor.children[0].textContent === 'Car') {
+                consoleOutput.textContent = userWinText.toUpperCase();
+                winsLossesCounter.Wins += 1;
+            } else {
+                consoleOutput.textContent = userLoseText.toUpperCase();
+                winsLossesCounter.Losses += 1;
+            }
+        }, 9000); 
 
         
 
