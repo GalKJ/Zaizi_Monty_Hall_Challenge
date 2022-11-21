@@ -65,7 +65,6 @@
         prizeArray = prizeArrayShuffler();
 
         consoleOutput.textContent = "";
-        // console.log(prizeArray);
         drawGrid(game);
     }
 
@@ -78,14 +77,11 @@
 // Function for user to start the game
     function startGame() {
 
-        console.log(prizeArray);
-
         const doors = document.querySelectorAll(".door");
         const doorParagraph0 = document.querySelector("#door-paragraph0");
         const doorParagraph1 = document.querySelector("#door-paragraph1");
         const doorParagraph2 = document.querySelector("#door-paragraph2");
         const doorParagraphs = document.querySelectorAll(".door-paragraph");
-        console.log(doors);
 
         doors.forEach(element => {
             element.classList.remove("users-door", "not-users-door");
@@ -105,19 +101,10 @@
             }
         });
 
-        // if (doorParagraph.forEach(string => {
-        //     string.textContent === "Goat"
-        // })) {
-        //     doors.forEach(door => {
-        //        door.classList.add("goat"); 
-        //     });
-        // }
-
         let randomDoorPicker = Math.floor(Math.random() * 3);
         const door0 = document.querySelector("#door0");
         const door1 = document.querySelector("#door1");
         const door2 = document.querySelector("#door2");
-        // const consoleOutput = document.querySelector("#console-output");
 
         switch (randomDoorPicker) {
             case 0:
@@ -147,10 +134,6 @@
         const lastDoor = document.querySelectorAll(".not-users-door");
         const userWinText = "User wins!";
         const userLoseText = "User loses!";
-        
-        // console.log(userWinTotal);
-        // let winLoseObjectValues = Object.values(winsLossesCounter);
-        // console.log(winLoseObjectValues);
         
         setTimeout(() => {
             goatRevealDoor.children[0].style.visibility = "visible";
@@ -186,18 +169,12 @@
                 winsLossesCounter.Losses ++;
             }
 
-            // console.log(winsLossesCounter);
-
             let userWinTotal = winsLossesCounter.Wins;
             let userLoseTotal = winsLossesCounter.Losses;
-
-            // console.log(userWinTotal);
-            // console.log(userLoseTotal);
 
             winsLossesCounterDisplay.textContent = `Won:${userWinTotal} Lost:${userLoseTotal}`
 
             startGameButton.addEventListener("click", startGame);
-            // startGameButton.addEventListener("click", loadPage);
 
         }, 9000); 
 
