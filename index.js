@@ -76,20 +76,37 @@
 
         console.log(prizeArray);
 
+        const doors = document.querySelectorAll(".door");
         const doorParagraph0 = document.querySelector("#door-paragraph0");
         const doorParagraph1 = document.querySelector("#door-paragraph1");
         const doorParagraph2 = document.querySelector("#door-paragraph2");
-        // console.log(doorParagraph0);
+        const doorParagraphs = document.querySelectorAll(".door-paragraph");
+        console.log(doors);
+
+        doors.forEach(element => {
+            element.classList.remove("users-door", "not-users-door");
+        });        
 
         doorParagraph0.textContent = prizeArray[0];
         doorParagraph1.textContent = prizeArray[1];
         doorParagraph2.textContent = prizeArray[2];
-        doorParagraph.forEach(string => {
+        
+        doorParagraphs.forEach(string => {
             string.style.visibility = "hidden";
         });
 
-        // if (doorParagraph.textContent === "Goat") {
-        //     door.classList.add("goat");
+        doorParagraphs.forEach(element => {
+            if (element.textContent === "Goat") {
+                element.parentElement.classList.add("goat");
+            }
+        });
+
+        // if (doorParagraph.forEach(string => {
+        //     string.textContent === "Goat"
+        // })) {
+        //     doors.forEach(door => {
+        //        door.classList.add("goat"); 
+        //     });
         // }
 
         let randomDoorPicker = Math.floor(Math.random() * 3);
