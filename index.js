@@ -1,12 +1,5 @@
 // Zaizi Monty Hall index.js file
 
-// Selected elements 
-const startGameButton = document.querySelector("button");
-let winsLossesCounterDisplay = document.querySelector("#win-lose-counter-display");
-
-// Event listeners
-startGameButton.addEventListener("click", startGame);
-
 // Array of prizes behind doors.
     let prizeArray = ['Car', 'Goat', 'Goat'];
 
@@ -15,6 +8,12 @@ startGameButton.addEventListener("click", startGame);
         Wins: 0,
         Losses: 0,
     }
+// Selected elements 
+    const startGameButton = document.querySelector("button");
+    let winsLossesCounterDisplay = document.querySelector("#win-lose-counter-display");
+
+// Event listeners
+    startGameButton.addEventListener("click", startGame);
 
     // const state = {
     //     grid: Array(3).fill(''),
@@ -105,8 +104,7 @@ startGameButton.addEventListener("click", startGame);
         const lastDoor = document.querySelectorAll(".not-users-door");
         const userWinText = "User wins!";
         const userLoseText = "User loses!";
-        let userWinTotal = winsLossesCounter.Wins;
-        let userLoseTotal = winsLossesCounter.Losses;
+        
         // console.log(userWinTotal);
         // let winLoseObjectValues = Object.values(winsLossesCounter);
         // console.log(winLoseObjectValues);
@@ -145,8 +143,15 @@ startGameButton.addEventListener("click", startGame);
                 winsLossesCounter.Losses ++;
             }
 
-            winsLossesCounterDisplay.textContent = `Win Lose Counter
-                                                    Won:${userWinTotal} Lost:${userLoseTotal}`
+            console.log(winsLossesCounter);
+
+            let userWinTotal = winsLossesCounter.Wins;
+            let userLoseTotal = winsLossesCounter.Losses;
+
+            console.log(userWinTotal);
+            console.log(userLoseTotal);
+
+            winsLossesCounterDisplay.textContent = `Won:${userWinTotal} Lost:${userLoseTotal}`
 
         }, 9000); 
 
