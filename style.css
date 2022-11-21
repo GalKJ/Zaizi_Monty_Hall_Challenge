@@ -93,5 +93,12 @@ font-size: 2.4rem;
   font-size: 1.6rem;
 }
 
+#win-lose-counter-display {
+  text-align: center;
+  color: white;
+  margin: 5% 0%;
+  font-size: 1.6rem;
+}
+
 
 

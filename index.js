@@ -105,6 +105,11 @@ startGameButton.addEventListener("click", startGame);
         const lastDoor = document.querySelectorAll(".not-users-door");
         const userWinText = "User wins!";
         const userLoseText = "User loses!";
+        let userWinTotal = winsLossesCounter.Wins;
+        let userLoseTotal = winsLossesCounter.Losses;
+        // console.log(userWinTotal);
+        // let winLoseObjectValues = Object.values(winsLossesCounter);
+        // console.log(winLoseObjectValues);
         
         setTimeout(() => {
             goatRevealDoor.children[0].style.visibility = "visible";
@@ -134,11 +139,15 @@ startGameButton.addEventListener("click", startGame);
             
             if (usersDoor.children[0].textContent === 'Car') {
                 consoleOutput.textContent = userWinText.toUpperCase();
-                winsLossesCounter.Wins += 1;
+                winsLossesCounter.Wins ++;
             } else {
                 consoleOutput.textContent = userLoseText.toUpperCase();
-                winsLossesCounter.Losses += 1;
+                winsLossesCounter.Losses ++;
             }
+
+            winsLossesCounterDisplay.textContent = `Win Lose Counter
+                                                    Won:${userWinTotal} Lost:${userLoseTotal}`
+
         }, 9000); 
 
         
