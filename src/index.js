@@ -3,9 +3,12 @@
     let prizeArray = ['Car', 'Goat', 'Goat'];
 
 // Object recording users wins and losses.
+    let userWonTally = localStorage.getItem('Won');
+    let userLostTally = localStorage.getItem('Lost');
+    
     let winsLossesCounter = {
-        Wins: 0,
-        Losses: 0,
+        Wins: userWonTally,
+        Losses: userLostTally,
     }
 
 // Selected global elements. 
@@ -58,7 +61,7 @@
         
         prizeArray = prizeArrayShuffler();
 
-        populateStorage();
+        // populateStorage();
 
         consoleOutput.textContent = "";
 
@@ -177,8 +180,8 @@
 
             winsLossesCounterDisplay.textContent = `Won:${userWinTotal} Lost:${userLoseTotal}`;
 
-            // localStorage.setItem('Won', `${userWinTotal}`);
-            // localStorage.setItem('Lost', `${userLoseTotal}`);
+            localStorage.setItem('Won', `${userWinTotal}`);
+            localStorage.setItem('Lost', `${userLoseTotal}`);
 
             startGameButton.addEventListener("click", startGame);
 
