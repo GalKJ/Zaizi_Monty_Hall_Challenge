@@ -30,12 +30,13 @@
         doorParagraph.className = 'door-paragraph';
         doorParagraph.id = `door-paragraph${column}`;
         door.appendChild(doorParagraph);
-        doorParagraph.textContent = prizeArray[column];
-        doorParagraph.style.visibility = "hidden";
+        doorParagraph.textContent = prize;
+        // doorParagraph.textContent = prizeArray[column];
+        // doorParagraph.style.visibility = "hidden";
 
-        if (doorParagraph.textContent === "Goat") {
-            door.classList.add("goat");
-        }
+        // if (doorParagraph.textContent === "Goat") {
+        //     door.classList.add("goat");
+        // }
 
         container.appendChild(door);
         
@@ -72,6 +73,25 @@
 
 // Function for user to start the game
     function startGame() {
+
+        console.log(prizeArray);
+
+        const doorParagraph0 = document.querySelector("#door-paragraph0");
+        const doorParagraph1 = document.querySelector("#door-paragraph1");
+        const doorParagraph2 = document.querySelector("#door-paragraph2");
+        // console.log(doorParagraph0);
+
+        doorParagraph0.textContent = prizeArray[0];
+        doorParagraph1.textContent = prizeArray[1];
+        doorParagraph2.textContent = prizeArray[2];
+        doorParagraph.forEach(string => {
+            string.style.visibility = "hidden";
+        });
+
+        // if (doorParagraph.textContent === "Goat") {
+        //     door.classList.add("goat");
+        // }
+
         let randomDoorPicker = Math.floor(Math.random() * 3);
         const door0 = document.querySelector("#door0");
         const door1 = document.querySelector("#door1");
