@@ -34,7 +34,6 @@ I broke the project down into the following user stories to get a clear idea of 
 - ... to stick with their door (the user will only ever stick). ✔️
 - ... to see if they win or lose. ✔️
 - ... to choose how many games to play. ✔️
-- ... to play manually or automatically. 👷‍♀️UNDER CONSTRUCTION 🚧
 - ... to have their wins and loses recorded and visible. ✔️
 
 ---
