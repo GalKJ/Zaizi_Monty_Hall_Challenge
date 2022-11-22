@@ -16,15 +16,8 @@
     let winsLossesCounterDisplay = document.querySelector("#win-lose-counter-display");
     const consoleOutput = document.querySelector("#console-output");
 
-
 // Event listeners.
-    startGameButton.addEventListener("click", startGame);
-
-    // const state = {
-    //     grid: Array(3).fill(''),
-    //     currentColumn: 0,
-    // } 
-
+    startGameButton.addEventListener("click", startGame); 
 
 // Function to draw doors that will contain prizes as their text content. 
     function drawDoor(container, column, prize = '') {
@@ -39,7 +32,6 @@
 
         container.appendChild(door);
         
-        // return door;
     }
 
 // Function to draw grid for doors.
