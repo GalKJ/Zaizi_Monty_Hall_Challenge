@@ -1,0 +1,3 @@
+function automaticGame(iterator) {
+    
+}
