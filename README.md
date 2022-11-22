@@ -21,11 +21,13 @@ In order to use the site you can follow this link https://d0g3bl2.github.io/Zaiz
 
 ### Cloning 
 
-Please feel free to clone the repo using this url 
+Please feel free to clone the repo using this url https://github.com/d0g3bl2/Zaizi_Monty_Hall_Challenge.git
 
 ---
 
 ### User Stories
+
+I broke the project down into the following user stories to get a clear idea of the different components and their functions.
 
 - The user wants to pick a door.
 - ... to have the goat revealed.
