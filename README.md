@@ -13,6 +13,18 @@ Some useful sources to introduce you to the problem are below.
 
 ---
 
+### Deploy the site
+
+In order to use the site you can follow this link https://d0g3bl2.github.io/Zaizi_Monty_Hall_Challenge/ 
+
+---
+
+### Cloning 
+
+Please feel free to clone the repo using this url 
+
+---
+
 ### User Stories
 
 - The user wants to pick a door.
