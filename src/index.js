@@ -57,15 +57,23 @@
 
 // Function to load the page and draw the UI.
     function loadPage() {
+
+        if (!localStorage.getItem('Won')) {
+            populateStorage(winsLossesCounterDisplay);
+          } else {
+            updateWinLoseCounterDisplay(winsLossesCounterDisplay);
+          }
+
         const game = document.querySelector("#game-container");
         
         prizeArray = prizeArrayShuffler();
 
-        // populateStorage();
-
         consoleOutput.textContent = "";
 
         drawGrid(game);
+
+        
+          
     }
 
 // Function to randomise the prize behind the door.
