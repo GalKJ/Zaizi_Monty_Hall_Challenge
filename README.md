@@ -41,4 +41,4 @@ I broke the project down into the following user stories to get a clear idea of 
 
 ### Thanks 
 
-I hope you have fun with the game and the stats make it clear that Von Santos was correct 🙂
+I hope you have fun with the game and the stats make it clear that Vos Savant was correct 🙂
