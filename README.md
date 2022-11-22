@@ -29,10 +29,16 @@ Please feel free to clone the repo using this url https://github.com/d0g3bl2/Zai
 
 I broke the project down into the following user stories to get a clear idea of the different components and their functions.
 
-- The user wants to pick a door.
-- ... to have the goat revealed.
-- ... to stick with their door (the user will only ever stick).
-- ... to see if they win or lose.
-- ... to choose how many games to play.
-- ... to play manually or automatically.
-- ... to have their wins and loses recorded and visible.
+- The user wants to pick a door. ✔️
+- ... to have the goat revealed. ✔️
+- ... to stick with their door (the user will only ever stick). ✔️
+- ... to see if they win or lose. ✔️
+- ... to choose how many games to play. ✔️
+- ... to play manually or automatically. 👷‍♀️
+- ... to have their wins and loses recorded and visible. ✔️
+
+---
+
+### Thanks 
+
+I hope you have fun with the game and the stats make it clear that Von Santos was correct 🙂
