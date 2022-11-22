@@ -186,7 +186,13 @@
             let userWinTotal = winsLossesCounter.Wins;
             let userLoseTotal = winsLossesCounter.Losses;
 
-            winsLossesCounterDisplay.textContent = `Won:${userWinTotal} Lost:${userLoseTotal}`;
+            if (userWinTotal === null) {
+                winsLossesCounterDisplay.textContent = `Won:0 Lost:${userLoseTotal}`;
+            } else if (userLoseTotal === null) {
+                winsLossesCounterDisplay.textContent = `Won:${userWinTotal} Lost:0`;
+            } else {
+                winsLossesCounterDisplay.textContent = `Won:${userWinTotal} Lost:${userLoseTotal}`
+            }
 
             localStorage.setItem('Won', `${userWinTotal}`);
             localStorage.setItem('Lost', `${userLoseTotal}`);

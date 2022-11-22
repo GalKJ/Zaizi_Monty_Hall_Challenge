@@ -8,15 +8,15 @@
         let wonTally = localStorage.getItem('Won');
         let lostTally = localStorage.getItem('Lost');
 
-        if (wonTally && lostTally === '0') {
-            element.textContent = 'Won:0 Lost:0';
-        }
-        
+        // if (wonTally && lostTally === '0') {
+            
+        // }
+        element.textContent = `Won:${wonTally} Lost:${lostTally}`;
         
     }
 
     function updateWinLoseCounterDisplay(element) {
-        
+
         let wonTally = localStorage.getItem('Won');
         let lostTally = localStorage.getItem('Lost');
         
