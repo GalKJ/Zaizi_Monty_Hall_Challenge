@@ -15,6 +15,8 @@
     const startGameButton = document.querySelector("button");
     let winsLossesCounterDisplay = document.querySelector("#win-lose-counter-display");
     const consoleOutput = document.querySelector("#console-output");
+    const userAutoGameInput = document.querySelector("#user-auto-game-input");
+    const startAutoGameButton = document.querySelector("#auto-button");
 
 // Event listeners.
     startGameButton.addEventListener("click", startGame); 
@@ -318,6 +320,11 @@
         startGameButton.removeEventListener("click", startGame);
 
     }
+// Event listener for auto game start button
+    startAutoGameButton.addEventListener('click', () => {
+        let userAutoGames = userAutoGameInput.value;
+        numberOfAutoGames(userAutoGames); 
+    })
 
 // Function runs as many games as the user asks for. 
     function numberOfAutoGames(number) {
