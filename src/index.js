@@ -11,7 +11,7 @@
         Losses: userLostTally,
     }
 
-// Selected global elements. 
+// Global variables. 
     const startGameButton = document.querySelector("button");
     let winsLossesCounterDisplay = document.querySelector("#win-lose-counter-display");
     const consoleOutput = document.querySelector("#console-output");
@@ -320,6 +320,7 @@
         startGameButton.removeEventListener("click", startGame);
 
     }
+    
 // Event listener for auto game start button
     startAutoGameButton.addEventListener('click', () => {
         let userAutoGames = userAutoGameInput.value;
