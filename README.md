@@ -15,7 +15,7 @@ Some useful sources to introduce you to the problem are below.
 
 ### Deploy the site
 
-In order to use the site you can follow this link https://d0g3bl2.github.io/Zaizi_Monty_Hall_Challenge/ 
+In order to use the site you can follow this link https://d0g3bl2.github.io/Zaizi_Monty_Hall_Challenge/ to the repos github pages.
 
 ---
 
